@@ -9,6 +9,8 @@ export const App = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
+const options = ['good', 'bad', 'neutral']
+
   const handleFeedback = event => {
    
     const { name } = event.target;
@@ -35,7 +37,7 @@ export const App = () => {
     <div>
       <Section title="Please leave your feedback">
         <FeedbackOptions
-          options={['good', 'bad', 'neutral']}
+          options={options}
           handleFeedback={handleFeedback}
         />
       </Section>
